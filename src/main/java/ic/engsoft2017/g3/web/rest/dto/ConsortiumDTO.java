@@ -1,6 +1,5 @@
 package ic.engsoft2017.g3.web.rest.dto;
 
-import com.sun.istack.internal.NotNull;
 import ic.engsoft2017.g3.model.MemberModel;
 import lombok.Getter;
 import lombok.Setter;
@@ -14,7 +13,6 @@ import java.util.Set;
 @Getter @Setter
 public class ConsortiumDTO {
 
-    @NotNull
     //@Size(min = 3, max = 200)
     private String name;
 

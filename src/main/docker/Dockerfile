@@ -1,13 +1,11 @@
-FROM openjdk:8-jre-alpine
+FROM frolvlad/alpine-oraclejdk8:slim
 
-ENV SPRING_OUTPUT_ANSI_ENABLED=ALWAYS \
-    JHIPSTER_SLEEP=0
+VOLUME ../../../build/libs/ /tmp
 
-# add directly the war
-ADD *.war /app.war
+ADD bookstore-consortium-0.0.1-SNAPSHOT.jar app.jar
 
-VOLUME /tmp
-EXPOSE 8081
-CMD echo "The application will start in ${JHIPSTER_SLEEP}s..." && \
-    sleep ${JHIPSTER_SLEEP} && \
-    java -Djava.security.egd=file:/dev/./urandom -jar /app.war
+RUN sh -c 'touch /app.jar'
+
+ENV JAVA_OPTS=""
+
+ENTRYPOINT [ "sh", "-c", "java $JAVA_OPTS -Djava.security.egd=file:/dev/./urandom -jar /app.jar" ]

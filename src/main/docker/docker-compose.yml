@@ -1,0 +1,15 @@
+version: '2'
+services:
+  bs-consortium-app:
+    build: .
+    ports:
+    - "8081:8081"
+    links:
+    - redis
+    - bs-consortium-mysql
+  redis:
+    image: redis
+  bs-consortium-mysql:
+    extends:
+      file: mysql.yml
+      service: bs-consortium-mysql

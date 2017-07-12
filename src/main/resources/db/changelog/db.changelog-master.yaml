@@ -1,0 +1,32 @@
+databaseChangeLog:
+  includeAll: 'tables/'
+- changeSet:
+    id: 1
+    author: pegoraroluiz
+    changes:
+      - createTable:
+          tableName: member
+            columns:
+              - column:
+                  name: pk
+                   type: long
+                   autoIncrement: true
+                   constraints:
+                      primaryKey: true
+                      nullable: false
+              - column:
+                  name: name
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: start
+                  type: date
+                  constraints:
+                    nullable: false
+              - column:
+                  name: end
+                  type: date
+                  constraints:
+                    nullable: false
+

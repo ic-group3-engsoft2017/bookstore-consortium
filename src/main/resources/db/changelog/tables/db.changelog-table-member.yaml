@@ -28,3 +28,13 @@ databaseChangeLog:
                   type: date
                   constraints:
                     nullable: false
+              - column:
+                name: user_uid
+                type: varchar(255)
+                constraints:
+                  nullable: false
+              - column:
+                  name: consortium
+                  type: long
+                  constraints:
+                    nullable: false

@@ -32,3 +32,4 @@ databaseChangeLog:
                   name: member
                   type: long
                   constraints:
+                    nullable: false

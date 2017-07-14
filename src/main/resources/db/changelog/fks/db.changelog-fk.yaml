@@ -1,0 +1,29 @@
+databaseChangeLog:
+  - changeSet:
+    id: 1
+    author: pegoraroluiz
+    changes:
+      - addForeignKeyConstraint:
+        baseColumnNames: member
+        baseTableName: member_tuiton
+        constraintNamme: fk_member_tuiton
+        deferrable: true
+        initiallyDeferrable: true
+        onDelete: CASCADE
+        onUpdate: RESTRICT
+        referencedColumnNames: pk
+        referencedTableName: member
+  - changeSet:
+    id: 2
+    author: pegoraroluiz
+    changes:
+      - addForeignKeyConstraint:
+        baseColumnNames: consortium
+        baseTableName: member
+        constraintNamme: fk_consortium_member
+        deferrable: true
+        initiallyDeferrable: true
+        onDelete: CASCADE
+        onUpdate: RESTRICT
+        referencedColumnNames: pk
+        referencedTableName: consortium

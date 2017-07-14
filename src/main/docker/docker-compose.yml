@@ -6,10 +6,10 @@ services:
     - "8081:8081"
     links:
     - redis
-    - bs-consortium-mysql
+    - bs-consortium-mysqldb
   redis:
     image: redis
-  bs-consortium-mysql:
+  bs-consortium-mysqldb:
     extends:
       file: mysql.yml
-      service: bs-consortium-mysql
+      service: bs-consortium-mysqldb

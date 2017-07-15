@@ -1,0 +1,21 @@
+def containerProfiles='container'
+def localProfiles='local'
+def testProfiles='test'
+def propertyDrivenProfiles;
+
+if (project.hasProperty('container')) {
+    // Used for production environment
+    propertyDrivenProfiles = containerProfiles
+    apply from: rootProject.file('gradle/profile_container.gradle');
+
+} else if (project.hasProperty('local')) {
+    // Used for local development
+    propertyDrivenProfiles = localProfiles
+    apply from: rootProject.file('gradle/profile_local.gradle');
+
+} else {
+    // Default when no profile property is specified, used for testing
+    propertyDrivenProfiles = testProfiles
+    apply from: rootProject.file('gradle/profile_test.gradle');
+}
+println 'Using profile: "' + propertyDrivenProfiles + '" for ' + project.getName()

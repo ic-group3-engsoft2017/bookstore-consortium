@@ -1,6 +1,7 @@
 package ic.engsoft2017.g3.model;
 
-import com.sun.istack.internal.NotNull;
+import lombok.Getter;
+import lombok.Setter;
 
 import javax.persistence.*;
 import java.util.Set;
@@ -10,6 +11,7 @@ import java.util.Set;
  */
 @Entity
 @Table(name = "member")
+@Getter @Setter
 public class MemberModel {
 
     @Id
@@ -20,7 +22,6 @@ public class MemberModel {
     @ElementCollection(fetch = FetchType.EAGER)
     private Set<MonthlyTuitonModel> payments;
 
-    @NotNull
     private String userUID;
 
     @ManyToOne

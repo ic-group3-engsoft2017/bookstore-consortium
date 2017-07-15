@@ -47,6 +47,7 @@ public class ConsortiumResource {
     }
 
     @GetMapping("/users")
+    @Secured(AuthoritiesConstants.ANONYMOUS)
     public ResponseEntity<List<ConsortiumModel>> getAllUsers() {
         final List<ConsortiumModel> consortiumModels = consortiumRepository.findAll();
         return new ResponseEntity<>

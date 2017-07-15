@@ -1,3 +1,10 @@
 databaseChangeLog:
-  includeAll: 'tables/'
-  includeAll: 'fks/'
+ - changeSet:
+    include:
+      file: 'db/changelog/tables/db.changelog-table-consortium.yaml'
+    include:
+      file: 'db/changelog/tables/db.changelog-table-member.yaml'
+    include:
+      file: 'db/changelog/tables/db.changelog-table-monthlytuiton.yaml'
+    include:
+      file: 'db/changelog/fks/db.changelog-fk.yaml'

@@ -5,8 +5,7 @@ services:
     ports:
     - "8001:8001"
     links:
-    - redis
-    - bs-consortium-mysqldb
+    - bs-consortium-mysqldb:mysql
   redis:
     image: redis
   bs-consortium-mysqldb:

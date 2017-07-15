@@ -10,7 +10,7 @@ import java.util.Set;
  * Created by pegoraroluiz on 7/9/17.
  */
 @Entity
-@Table(name = "member",schema = "bookstore_consortium")
+@Table(name = "member")
 @Getter @Setter
 public class MemberModel {
 

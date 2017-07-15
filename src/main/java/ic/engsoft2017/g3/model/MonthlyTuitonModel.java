@@ -14,7 +14,7 @@ import java.time.LocalDateTime;
  * Created by pegoraroluiz on 7/9/17.
  */
 @Entity
-@Table(name = "member_tuiton",schema = "bookstore_consortium")
+@Table(name = "member_tuiton")
 @Getter @Setter
 public class MonthlyTuitonModel {
 

@@ -1,6 +1,7 @@
 package ic.engsoft2017.g3.usecase.crud.impl;
 
 import ic.engsoft2017.g3.model.ConsortiumModel;
+import ic.engsoft2017.g3.model.builder.ConsortiumModelBuilder;
 import ic.engsoft2017.g3.repository.ConsortiumRepository;
 import ic.engsoft2017.g3.usecase.crud.CreateNewConsortiumUseCase;
 import ic.engsoft2017.g3.web.rest.dto.ConsortiumDTO;
@@ -27,6 +28,13 @@ public class CrudConsortiumServiceImpl implements CreateNewConsortiumUseCase {
     }
 
     private ConsortiumModel fromDTO(ConsortiumDTO dto) {
-        return new ConsortiumModel();
+        return ConsortiumModelBuilder.aConsortiumModel()
+                .withName(dto.getName())
+                .withStart(dto.getStart())
+                .withEnd(dto.getEnd())
+                .withVoucher(dto.getVoucher())
+                .withMembers(dto.getMembers())
+                .withAdminstrators(dto.getAdminstrators())
+                .build();
     }
 }

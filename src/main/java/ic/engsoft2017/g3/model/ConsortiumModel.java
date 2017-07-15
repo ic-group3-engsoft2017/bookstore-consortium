@@ -11,7 +11,7 @@ import java.util.Set;
  * Created by pegoraroluiz on 7/9/17.
  */
 @Entity
-@Table(name = "consortium", schema = "bookstore_consortium")
+@Table(name = "consortium")
 @Getter @Setter
 public class ConsortiumModel {
 

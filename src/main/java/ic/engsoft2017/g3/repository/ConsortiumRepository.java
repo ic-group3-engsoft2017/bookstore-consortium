@@ -17,6 +17,6 @@ public interface ConsortiumRepository extends JpaRepository<ConsortiumModel, Lon
 
     List<ConsortiumModel> findAllByStartAfterAndEndBefore(LocalDateTime before, LocalDateTime after);
 
-    List<ConsortiumModel> findAllByAdminstrator(MemberModel admin);
+    List<ConsortiumModel> findAllByAdminstratorsContains(MemberModel admin);
 
 }

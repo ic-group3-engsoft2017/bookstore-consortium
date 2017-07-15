@@ -43,3 +43,15 @@ dependencies {
     compile('javax.validation:validation-api')
     compileOnly('org.projectlombok:lombok')
 }
+
+jar {
+    baseName = 'bookstore-consortium'
+    version =  '0.0.1-SNAPSHOT'
+}
+
+task copyJar(type: Copy){
+    from jar
+    into 'src/main/docker/'
+}
+
+build.dependsOn copyJar

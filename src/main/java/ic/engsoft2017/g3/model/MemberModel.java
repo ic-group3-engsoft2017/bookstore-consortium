@@ -6,9 +6,6 @@ import lombok.Setter;
 import javax.persistence.*;
 import java.util.Set;
 
-/**
- * Created by pegoraroluiz on 7/9/17.
- */
 @Entity
 @Table(name = "member")
 @Getter @Setter

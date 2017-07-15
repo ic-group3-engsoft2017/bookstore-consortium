@@ -7,9 +7,6 @@ import javax.persistence.*;
 import java.time.LocalDateTime;
 import java.util.Set;
 
-/**
- * Created by pegoraroluiz on 7/9/17.
- */
 @Entity
 @Table(name = "consortium")
 @Getter @Setter

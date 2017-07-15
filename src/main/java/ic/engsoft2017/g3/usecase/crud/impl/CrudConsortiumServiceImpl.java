@@ -5,14 +5,13 @@ import ic.engsoft2017.g3.model.builder.ConsortiumModelBuilder;
 import ic.engsoft2017.g3.repository.ConsortiumRepository;
 import ic.engsoft2017.g3.usecase.crud.CreateNewConsortiumUseCase;
 import ic.engsoft2017.g3.web.rest.dto.ConsortiumDTO;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
 import java.util.Optional;
 
-/**
- * Created by pegoraroluiz on 7/15/17.
- */
 @Service
+@Slf4j
 public class CrudConsortiumServiceImpl implements CreateNewConsortiumUseCase {
 
     private ConsortiumRepository consortiumRepository;

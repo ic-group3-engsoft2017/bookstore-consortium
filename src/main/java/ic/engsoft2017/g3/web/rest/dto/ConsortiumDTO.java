@@ -7,9 +7,6 @@ import lombok.Setter;
 import java.time.LocalDateTime;
 import java.util.Set;
 
-/**
- * Created by pegoraroluiz on 7/9/17.
- */
 @Getter @Setter
 public class ConsortiumDTO {
 

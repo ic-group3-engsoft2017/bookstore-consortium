@@ -6,9 +6,6 @@ import ic.engsoft2017.g3.model.MemberModel;
 import java.time.LocalDateTime;
 import java.util.Set;
 
-/**
- * Created by pegoraroluiz on 7/15/17.
- */
 public final class ConsortiumModelBuilder {
     private Long pk;
     private String name;

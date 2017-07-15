@@ -14,9 +14,6 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-/**
- * Created by pegoraroluiz on 7/9/17.
- */
 @RestController
 @RequestMapping("/api")
 @Slf4j
@@ -37,8 +34,8 @@ public class ConsortiumResource {
     @Secured(AuthoritiesConstants.USER)
     public ResponseEntity createConsortium(@RequestBody ConsortiumDTO consortiumDTO) {
         if(consortiumRepository.findOneByName(consortiumDTO.getName()).isPresent()){
-            return ResponseEntity.badRequest().headers(HeaderUtil.createFailureAlert(ENTITY_NAME, "idexists", "A new consortiu cannot already have an name"))
-                    .body(null);
+            return ResponseEntity.badRequest().headers(HeaderUtil.createFailureAlert(ENTITY_NAME, "idexists", "A new consortium cannot already have an name"))
+                    .body("A new consortium cannot already have an name");
         }
         ConsortiumModel model = createNewConsortium.save(consortiumDTO);
         return ResponseEntity.ok()
